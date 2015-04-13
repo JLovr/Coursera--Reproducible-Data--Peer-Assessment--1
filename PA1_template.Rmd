@@ -148,12 +148,12 @@ f2<-cbind(aggregate(steps~interval,e2,mean),daytype="weekday")
 f<-rbind(f1,f2)
 
 p<-ggplot(f,aes(interval,steps))+geom_line()
-p<-p+ylab("Nu4 mber of Steps")
+p<-p+ylab("Number of Steps")
 p<-p+facet_wrap(~daytype,nrow=2)
 print(p)
 ```
 
 
-From the plot, we can see that there is noticeably less activity on weekdays between the 900 and 1700 interval marks, possibly corresponding to the lower movement activity of day shift office workers on weekdays.
+From the plot, we can see that there is noticeably less activity on weekdays between the 900 and 1700 interval marks, possibly corresponding to the lower movement activity of some types of day shift workers on weekdays.
 
 One also notes the increased activity between the 500 and 900 interval marks on weekdays possibly due to the daily ritual of preparing for and arriving at work.
